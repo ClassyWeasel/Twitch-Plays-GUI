@@ -1,8 +1,5 @@
 # Written by DougDoug (DougDoug on Youtube, DougDougW on Twitch)
 
-# Hello!
-# This file contains the main logic to process Twitch chat and convert it to game commands.
-# All sections that you need to update are labeled with a "TODO" comment.
 # The source code primarily comes from:
     # Wituz's "Twitch Plays" tutorial: http://www.wituz.com/make-your-own-twitch-plays-stream.html
     # PythonProgramming's "Python Plays GTA V" tutorial: https://pythonprogramming.net/direct-input-game-python-plays-gta-v/
@@ -70,7 +67,7 @@ def PressAndHoldKey(hexKeyCode, seconds):
     # NOTE: pyautogui's click() function permanently holds down in DirectX, so I used pynput instead for mouse instead.
 mouse = Controller()
 
-###############################################
+###################### Written by ClassyWeasel #########################
 
 # Array of commands (List of each Twitch command for GTAV)
 commandList = ["Left", "Right", "Drive", "Reverse", "Stop", "Brake", "Shoot", "Drag Mouse Up", "Drag Mouse Down", "Select All", "Type "]
@@ -168,6 +165,7 @@ class SampleApp(tk.Tk):
 
 
 ###############################################
+
 # DIRECTX KEY CODES
 # These codes identify each key on the keyboard.
 # Note that DirectX's key codes (or "scan codes") are NOT the same as Windows virtual hex key codes. 
@@ -252,14 +250,6 @@ MOUSE_WHEEL_UP = 0x108
 MOUSE_WHEEL_DOWN = 0x109
 ########################################################
 
-# An optional countdown before the code actually starts running, so you have time to load up the game before messages are processed.
-# TODO: Set the "countdown" variable to whatever countdown length you want.
-#countdown = 5 #The number of seconds before the code starts running
-#while countdown > 0:
-#    print(countdown)
-#    countdown -= 1
-#    time.sleep(1)
-
 # Connects to your twitch chat, using your username and OAuth token.
 # TODO: make sure that your Twitch username and OAuth token are added to the "TwitchPlays_AccountInfo.py" file
 t = TwitchPlays_Connection.Twitch();
@@ -283,15 +273,6 @@ def task():
                     # We got a new message! Get the message and the username.
                     msg = message['message'].lower()
                     username = message['username'].lower()
-
-                    # TODO:
-                    # Now that you have a chat message, this is where you add your game logic.
-                    # Use the "PressKeyPynput(KEYCODE)" function to press and hold down a keyboard key.
-                    # Use the "ReleaseKeyPynput(KEYCODE)" function to release a specific keyboard key.
-                    # Use the "PressAndHoldKey(KEYCODE, SECONDS)" function press down a key for X seconds, then release it.
-                    # Use "mouse.press(Button.left)" or "mouse.release(Button.left)" to press/release the mouse. Can use Button.right for right click.
-
-                    # I've added some example videogame logic code below:
 
                     ###################################
                     # Example GTA V Code
