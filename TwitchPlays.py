@@ -377,7 +377,7 @@ SpelunkyDescrip = ["WIP"] * len(SpelunkyCommandList)
 
 
 # List of games that this code supports
-gameList = ["GTA", "Skyrim", "Smash64", "MK64", "TetrisMB", "Internet", "Mario64", "MKDD", "MP7", "SBMelee", "Minecraft", "Outlast", "SMWorld", "TF2", "SSXT", "Spelunky"]
+gameList = ["GTA", "Skyrim (does not work atm)", "Smash64", "MK64", "TetrisMB", "Internet", "Mario64", "MKDD", "MP7", "SBMelee", "Minecraft", "Outlast", "SMWorld", "TF2", "SSXT", "Spelunky"]
 
 # Initial window for choosing your game
 class chooseGame():
