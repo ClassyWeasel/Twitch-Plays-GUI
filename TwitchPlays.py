@@ -471,8 +471,7 @@ class App(tk.Tk):
             self.pause_btn.config(text="Click Here to Start Twitch Plays!")
         else:
             self.countdown(5)
-            TwitchActive = True
-            self.pause_btn.config(text="Click Here to Pause Twitch Plays")
+            self.after(5000, self.playTwitch)
 
 
     # Pop up self when clicking on the description of each Twitch command
@@ -489,11 +488,20 @@ class App(tk.Tk):
 
 
     def countdown(self, count):
-        while count > 0:
-            self.title(f"Twitch Plays will start in {count}")
-            time.sleep(1)
-            count -= 1
-        self.title("Twitch Plays")
+        w = tk.Tk()
+        w.geometry('300x50')
+        label1 = tk.Label(w, text=f"Twitch plays will begin in {count} seconds", width=0, height=4, font=20)
+        label1.grid(sticky="NSEW", column=0, row=0)
+        w.grid_rowconfigure(0, weight=1)
+        w.grid_columnconfigure(0, weight=1)
+        w.title("Countdown")
+        w.after(5000, w.destroy)
+
+
+    def playTwitch(self):
+        global TwitchActive
+        TwitchActive = True
+        self.pause_btn.config(text="Click Here to Pause Twitch Plays")
 
 
 ##########################################################
