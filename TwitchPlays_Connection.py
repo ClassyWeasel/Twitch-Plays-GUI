@@ -2,8 +2,10 @@
 # This is the code that connects to twitch and checks for new messages.
 # You should not need to modify anything in this file, just use as is.
 
-# All code in this file is from Wituz's "Twitch Plays" tutorial at:
+# Almost all code in this file is from Wituz's "Twitch Plays" tutorial at:
 # http://www.wituz.com/make-your-own-twitch-plays-stream.html
+
+# Updated to Python 3 by ClassyWeasel
 
 import socket
 import sys
